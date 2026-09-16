@@ -36,38 +36,37 @@
         ::-webkit-scrollbar-track { background:transparent; }
         ::-webkit-scrollbar-thumb { background:var(--border); border-radius:10px; }
 
-        /* AUTH */
         .auth-screen { position:fixed; inset:0; background:var(--bg-primary); display:flex; align-items:center; justify-content:center; z-index:1000; transition:opacity .5s,visibility .5s; }
         .auth-screen.hidden { opacity:0; visibility:hidden; pointer-events:none; }
-        .auth-container { width:420px; max-width:95vw; padding:50px 40px; background:var(--bg-secondary); border-radius:var(--radius-lg); border:1px solid var(--border); box-shadow:var(--shadow-2); text-align:center; }
-        .auth-logo { width:80px; height:80px; background:var(--gradient-1); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 24px; font-size:36px; box-shadow:var(--shadow-1); animation:pulse-glow 2s infinite; }
+        .auth-container { width:420px; max-width:95vw; padding:40px 30px; background:var(--bg-secondary); border-radius:var(--radius-lg); border:1px solid var(--border); box-shadow:var(--shadow-2); text-align:center; }
+        .auth-logo { width:70px; height:70px; background:var(--gradient-1); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-size:32px; box-shadow:var(--shadow-1); animation:pulse-glow 2s infinite; }
         @keyframes pulse-glow { 0%,100%{box-shadow:0 0 20px rgba(108,92,231,.4)} 50%{box-shadow:0 0 40px rgba(108,92,231,.7)} }
-        .auth-container h1 { font-size:28px; font-weight:700; margin-bottom:8px; background:var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-        .auth-container p { color:var(--text-secondary); margin-bottom:32px; font-size:14px; }
-        .auth-tabs { display:flex; gap:4px; background:var(--bg-tertiary); border-radius:var(--radius-sm); padding:4px; margin-bottom:28px; }
+        .auth-container h1 { font-size:26px; font-weight:700; margin-bottom:6px; background:var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+        .auth-container p { color:var(--text-secondary); margin-bottom:24px; font-size:14px; }
+        .auth-tabs { display:flex; gap:4px; background:var(--bg-tertiary); border-radius:var(--radius-sm); padding:4px; margin-bottom:24px; }
         .auth-tab { flex:1; padding:10px; border:none; background:transparent; color:var(--text-secondary); cursor:pointer; border-radius:8px; font-weight:500; font-size:14px; transition:all .3s; font-family:inherit; }
         .auth-tab.active { background:var(--accent); color:white; box-shadow:var(--shadow-1); }
-        .input-group { position:relative; margin-bottom:16px; }
+        .input-group { position:relative; margin-bottom:14px; }
         .input-group i { position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--text-muted); font-size:14px; }
-        .input-group input { width:100%; padding:14px 16px 14px 44px; background:var(--bg-tertiary); border:1px solid var(--border); border-radius:var(--radius-sm); color:var(--text-primary); font-size:14px; font-family:inherit; outline:none; transition:all .3s; }
+        .input-group input { width:100%; padding:12px 16px 12px 44px; background:var(--bg-tertiary); border:1px solid var(--border); border-radius:var(--radius-sm); color:var(--text-primary); font-size:14px; font-family:inherit; outline:none; transition:all .3s; }
         .input-group input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(108,92,231,.15); }
         .input-group input::placeholder { color:var(--text-muted); }
-        .auth-btn { width:100%; padding:14px; background:var(--gradient-1); border:none; border-radius:var(--radius-sm); color:white; font-size:15px; font-weight:600; cursor:pointer; transition:all .3s; margin-top:8px; font-family:inherit; }
+        .auth-btn { width:100%; padding:12px; background:var(--gradient-1); border:none; border-radius:var(--radius-sm); color:white; font-size:15px; font-weight:600; cursor:pointer; transition:all .3s; margin-top:8px; font-family:inherit; }
         .auth-btn:hover { transform:translateY(-2px); box-shadow:var(--shadow-1); }
-        .auth-error { color:var(--danger); font-size:13px; margin-top:12px; min-height:20px; }
-        .avatar-upload { margin-bottom:20px; }
-        .avatar-upload label { width:70px; height:70px; border-radius:50%; background:var(--bg-tertiary); border:2px dashed var(--border); display:flex; align-items:center; justify-content:center; margin:0 auto; cursor:pointer; transition:all .3s; overflow:hidden; }
+        .forgot-link { display:block; margin-top:12px; font-size:13px; color:var(--accent-light); text-decoration:none; cursor:pointer; transition:color .2s; }
+        .forgot-link:hover { color:white; text-decoration:underline; }
+        .auth-error { color:var(--danger); font-size:13px; margin-top:12px; min-height:20px; word-break:break-word; }
+        .avatar-upload { margin-bottom:16px; }
+        .avatar-upload label { width:65px; height:65px; border-radius:50%; background:var(--bg-tertiary); border:2px dashed var(--border); display:flex; align-items:center; justify-content:center; margin:0 auto; cursor:pointer; transition:all .3s; overflow:hidden; }
         .avatar-upload label:hover { border-color:var(--accent); }
         .avatar-upload label img { width:100%; height:100%; object-fit:cover; }
         .avatar-upload input { display:none; }
         .register-fields { display:none; }
         .register-fields.active { display:block; }
 
-        /* APP */
         .app { display:flex; height:100vh; opacity:0; visibility:hidden; transition:opacity .5s,visibility .5s; }
         .app.visible { opacity:1; visibility:visible; }
 
-        /* SIDEBAR */
         .sidebar { width:360px; min-width:360px; background:var(--bg-secondary); border-right:1px solid var(--border); display:flex; flex-direction:column; }
         .sidebar-header { padding:16px 20px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--border); }
         .sidebar-header h2 { font-size:22px; font-weight:700; background:var(--gradient-1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
@@ -92,7 +91,6 @@
         .chat-preview { font-size:13px; color:var(--text-secondary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
         .unread-badge { min-width:20px; height:20px; background:var(--accent); border-radius:10px; font-size:11px; font-weight:600; display:flex; align-items:center; justify-content:center; padding:0 6px; }
 
-        /* CHAT AREA */
         .chat-area { flex:1; display:flex; flex-direction:column; background:var(--bg-primary); }
         .chat-area-empty { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; color:var(--text-muted); }
         .chat-area-empty i { font-size:80px; margin-bottom:20px; opacity:.3; }
@@ -105,7 +103,6 @@
         .chat-header-status { font-size:12px; color:var(--success); }
         .chat-header-actions { display:flex; gap:8px; }
 
-        /* MESSAGES */
         .messages-container { flex:1; overflow-y:auto; padding:20px 24px; display:flex; flex-direction:column; gap:4px; }
         .message-wrapper { display:flex; flex-direction:column; max-width:70%; position:relative; }
         .message-wrapper.sent { align-self:flex-end; }
@@ -136,7 +133,6 @@
         .message-wrapper.received .reaction-trigger { right:-36px; }
         .reaction-trigger:hover { background:var(--accent); color:white; }
 
-        /* INPUT */
         .input-area { padding:16px 24px; border-top:1px solid var(--border); background:var(--bg-secondary); }
         .input-bar { display:flex; align-items:flex-end; gap:12px; }
         .input-bar-left { display:flex; gap:4px; }
@@ -148,7 +144,6 @@
         .send-btn { width:44px; height:44px; border-radius:50%; border:none; background:var(--gradient-1); color:white; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:16px; transition:all .3s; flex-shrink:0; }
         .send-btn:hover { transform:scale(1.1); box-shadow:var(--shadow-1); }
 
-        /* EMOJI */
         .emoji-picker { position:absolute; bottom:100%; left:0; margin-bottom:10px; background:var(--bg-secondary); border:1px solid var(--border); border-radius:var(--radius); padding:12px; width:340px; max-height:350px; overflow-y:auto; display:none; box-shadow:var(--shadow-2); z-index:200; }
         .emoji-picker.show { display:block; }
         .emoji-category { margin-bottom:12px; }
@@ -157,7 +152,6 @@
         .emoji-item { font-size:22px; padding:4px; text-align:center; cursor:pointer; border-radius:6px; transition:all .2s; }
         .emoji-item:hover { background:var(--bg-hover); transform:scale(1.2); }
 
-        /* CALL */
         .call-screen { position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:500; display:none; flex-direction:column; align-items:center; justify-content:center; }
         .call-screen.active { display:flex; }
         .call-avatar-large { width:120px; height:120px; border-radius:50%; background:var(--gradient-1); display:flex; align-items:center; justify-content:center; font-size:48px; margin-bottom:24px; animation:call-pulse 1.5s infinite; overflow:hidden; }
@@ -177,7 +171,6 @@
         .local-video video { width:100%; height:100%; object-fit:cover; }
         .video-call-controls { position:absolute; bottom:40px; left:50%; transform:translateX(-50%); display:flex; gap:16px; }
 
-        /* RECORD CIRCLE */
         .record-circle-overlay { position:fixed; inset:0; background:rgba(0,0,0,.85); z-index:400; display:none; align-items:center; justify-content:center; flex-direction:column; }
         .record-circle-overlay.active { display:flex; }
         .record-preview { width:250px; height:250px; border-radius:50%; overflow:hidden; border:4px solid var(--danger); margin-bottom:24px; }
@@ -185,11 +178,11 @@
         .record-controls { display:flex; gap:16px; }
         .record-timer { font-size:24px; font-weight:600; color:var(--danger); margin-bottom:20px; }
 
-        /* MODAL */
-        .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:300; display:none; align-items:center; justify-content:center; }
+        .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:1100; display:none; align-items:center; justify-content:center; }
         .modal-overlay.active { display:flex; }
         .modal { width:420px; max-width:95vw; background:var(--bg-secondary); border-radius:var(--radius); border:1px solid var(--border); padding:28px; box-shadow:var(--shadow-2); }
-        .modal h3 { font-size:18px; margin-bottom:20px; text-align:center; }
+        .modal h3 { font-size:18px; margin-bottom:16px; text-align:center; }
+        .modal p { font-size:13px; color:var(--text-secondary); margin-bottom:20px; text-align:center; }
         .modal-actions { display:flex; gap:12px; margin-top:20px; }
         .modal-actions button { flex:1; padding:12px; border:none; border-radius:var(--radius-sm); font-family:inherit; font-weight:600; cursor:pointer; transition:all .3s; }
         .btn-cancel { background:var(--bg-tertiary); color:var(--text-secondary); }
@@ -199,7 +192,6 @@
         .user-list-avatar { width:40px; height:40px; border-radius:50%; background:var(--gradient-2); display:flex; align-items:center; justify-content:center; font-weight:600; font-size:16px; overflow:hidden; }
         .user-list-avatar img { width:100%; height:100%; object-fit:cover; }
 
-        /* PROFILE */
         .profile-panel { width:0; overflow:hidden; background:var(--bg-secondary); border-left:1px solid var(--border); transition:width .3s; flex-shrink:0; }
         .profile-panel.open { width:320px; }
         .profile-panel-content { width:320px; padding:24px; text-align:center; }
@@ -212,12 +204,10 @@
         .settings-item.danger i { color:var(--danger); }
         .settings-item.danger span { color:var(--danger); }
 
-        /* TYPING */
         .typing-indicator { padding:4px 16px; font-size:12px; color:var(--accent-light); font-style:italic; }
         .date-divider { text-align:center; padding:16px 0; color:var(--text-muted); font-size:12px; }
         .date-divider span { background:var(--bg-tertiary); padding:4px 16px; border-radius:12px; border:1px solid var(--border); }
 
-        /* FILE PREVIEW */
         .file-preview { padding:8px 24px; background:var(--bg-secondary); border-top:1px solid var(--border); display:none; align-items:center; gap:12px; }
         .file-preview.active { display:flex; }
         .file-preview-thumb { width:60px; height:60px; border-radius:8px; overflow:hidden; background:var(--bg-tertiary); }
@@ -227,20 +217,17 @@
         .file-preview-info span { font-size:11px; color:var(--text-muted); }
         .file-preview-close { width:32px; height:32px; border-radius:50%; border:none; background:var(--bg-tertiary); color:var(--text-secondary); cursor:pointer; font-size:12px; }
 
-        /* MEDIA VIEWER */
         .media-viewer { position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:500; display:none; align-items:center; justify-content:center; }
         .media-viewer.active { display:flex; }
         .media-viewer img, .media-viewer video { max-width:90vw; max-height:90vh; border-radius:var(--radius-sm); }
         .media-viewer-close { position:absolute; top:20px; right:20px; width:44px; height:44px; border-radius:50%; border:none; background:var(--bg-tertiary); color:white; font-size:18px; cursor:pointer; }
 
-        /* COMPRESSING OVERLAY */
-        .compressing { position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:600; display:none; align-items:center; justify-content:center; flex-direction:column; gap:16px; }
+        .compressing { position:fixed; inset:0; background:rgba(0,0,0,.7); z-index:1200; display:none; align-items:center; justify-content:center; flex-direction:column; gap:16px; }
         .compressing.active { display:flex; }
         .compressing i { font-size:40px; color:var(--accent); animation:spin 1s linear infinite; }
         @keyframes spin { to { transform:rotate(360deg); } }
         .compressing p { color:var(--text-primary); font-size:16px; }
 
-        /* MOBILE */
         @media(max-width:768px) {
             .sidebar { width:100%; min-width:100%; }
             .chat-area { position:fixed; inset:0; z-index:100; display:none; }
@@ -255,15 +242,15 @@
 </head>
 <body>
 
-<!-- AUTH -->
+<!-- ВХОД И РЕГИСТРАЦИЯ -->
 <div class="auth-screen" id="authScreen">
     <div class="auth-container">
         <div class="auth-logo"><i class="fas fa-comments"></i></div>
         <h1>ChatVerse</h1>
         <p>Общайся без границ</p>
         <div class="auth-tabs">
-            <button class="auth-tab active" onclick="switchAuthTab('login')">Вход</button>
-            <button class="auth-tab" onclick="switchAuthTab('register')">Регистрация</button>
+            <button class="auth-tab active" id="loginTabBtn" onclick="switchAuthTab('login')">Вход</button>
+            <button class="auth-tab" id="registerTabBtn" onclick="switchAuthTab('register')">Регистрация</button>
         </div>
         <form id="authForm" onsubmit="handleAuth(event)">
             <div class="register-fields" id="registerFields">
@@ -285,12 +272,30 @@
                 <i class="fas fa-lock"></i>
             </div>
             <button type="submit" class="auth-btn" id="authBtn">Войти</button>
+            <a class="forgot-link" id="forgotBtn" onclick="openResetModal()">Забыли пароль?</a>
             <div class="auth-error" id="authError"></div>
         </form>
     </div>
 </div>
 
-<!-- APP -->
+<!-- МОДАЛКА СБРОСА ПАРОЛЯ -->
+<div class="modal-overlay" id="resetPasswordModal">
+    <div class="modal">
+        <h3>🔑 Восстановление пароля</h3>
+        <p>Введите ваш Email, и мы отправим ссылку для сброса пароля.</p>
+        <div class="input-group">
+            <input type="email" id="resetEmail" placeholder="Ваш Email">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <div class="auth-error" id="resetError"></div>
+        <div class="modal-actions">
+            <button class="btn-cancel" onclick="closeResetModal()">Отмена</button>
+            <button class="btn-primary" onclick="handleResetPassword()">Отправить</button>
+        </div>
+    </div>
+</div>
+
+<!-- ОСНОВНОЕ ПРИЛОЖЕНИЕ -->
 <div class="app" id="app">
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
@@ -371,7 +376,7 @@
     </div>
 </div>
 
-<!-- CALL -->
+<!-- ЗВОНОК -->
 <div class="call-screen" id="callScreen">
     <div class="call-avatar-large" id="callAvatar">U</div>
     <div class="call-name" id="callName">User</div>
@@ -393,24 +398,22 @@
     </div>
 </div>
 
-<!-- RECORD CIRCLE -->
+<!-- КРУЖКИ -->
 <div class="record-circle-overlay" id="recordCircleOverlay">
     <div class="record-timer" id="recordTimer">00:00</div>
     <div class="record-preview"><video id="recordPreview" autoplay playsinline muted></video></div>
-    <p style="color:var(--text-secondary);margin-bottom:16px;font-size:13px;">Макс. 10 сек (лимит Firestore)</p>
+    <p style="color:var(--text-secondary);margin-bottom:16px;font-size:13px;">Макс. 10 сек</p>
     <div class="record-controls">
         <button class="call-btn end" onclick="stopRecordCircle(false)"><i class="fas fa-times"></i></button>
         <button class="call-btn" style="background:var(--success)" onclick="stopRecordCircle(true)"><i class="fas fa-check"></i></button>
     </div>
 </div>
 
-<!-- MEDIA VIEWER -->
 <div class="media-viewer" id="mediaViewer" onclick="closeMediaViewer()">
     <button class="media-viewer-close"><i class="fas fa-times"></i></button>
     <div id="mediaViewerContent"></div>
 </div>
 
-<!-- NEW CHAT MODAL -->
 <div class="modal-overlay" id="newChatModal">
     <div class="modal">
         <h3>🔍 Найти пользователя</h3>
@@ -423,21 +426,17 @@
     </div>
 </div>
 
-<!-- COMPRESSING -->
 <div class="compressing" id="compressingOverlay">
     <i class="fas fa-spinner"></i>
-    <p>Сжатие и отправка...</p>
+    <p>Обработка...</p>
 </div>
 
-<!-- FIREBASE (без storage!) -->
+<!-- FIREBASE SDK -->
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
 
 <script>
-// =============================================
-// 🔧 FIREBASE CONFIG (твой реальный)
-// =============================================
 const firebaseConfig = {
     apiKey: "AIzaSyBKiUSqJi_Ah1WiA8zbE3kv5LK34x0y6Wk",
     authDomain: "kavun-503cd.firebaseapp.com",
@@ -451,15 +450,11 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
-// Storage НЕ используем!
 
-// =============================================
-// 📦 STATE
-// =============================================
 let currentUser = null;
 let activeChatId = null;
 let activeChatUser = null;
-let selectedFileData = null; // { base64, type }
+let selectedFileData = null;
 let mediaRecorder = null;
 let recordedChunks = [];
 let recordTimerInterval = null;
@@ -471,32 +466,25 @@ let localStream = null;
 let isMuted = false;
 let isCameraOff = false;
 
-// =============================================
-// 😊 EMOJI DATA
-// =============================================
 const emojiData = {
     'Смайлы': ['😀','😃','😄','😁','😅','😂','🤣','😊','😇','🙂','😉','😌','😍','🥰','😘','😗','😙','😚','😋','😛','😜','🤪','😝','🤑','🤗','🤭','🤫','🤔','🤐','🤨','😐','😑','😶','😏','😒','🙄','😬','😮','😯','😲','😳','🥺','😦','😧','😨','😰','😥','😢','😭','😱','😖','😣','😞','😓','😩','😫','🥱','😤','😡','🤬','😈','👿','💀','☠️','💩','🤡','👹','👺','👻','👽','👾','🤖'],
     'Жесты': ['👋','🤚','🖐','✋','🖖','👌','🤌','🤏','✌️','🤞','🤟','🤘','🤙','👈','👉','👆','🖕','👇','☝️','👍','👎','✊','👊','🤛','🤜','👏','🙌','👐','🤲','🙏','💪'],
     'Сердца': ['❤️','🧡','💛','💚','💙','💜','🖤','🤍','🤎','💔','❣️','💕','💞','💓','💗','💖','💘','💝','💟'],
     'Животные': ['🐶','🐱','🐭','🐹','🐰','🦊','🐻','🐼','🐨','🐯','🦁','🐮','🐷','🐸','🐵','🐔','🐧','🐦','🦆','🦅','🦉','🦇','🐺','🐗','🐴','🦄','🐝','🐛','🦋','🐌','🐞'],
     'Еда': ['🍎','🍐','🍊','🍋','🍌','🍉','🍇','🍓','🫐','🍈','🍒','🍑','🥭','🍍','🥥','🥝','🍅','🥑','🍕','🍔','🍟','🌭','🍿','🧂','🥚','🍳','🧈','🥞','🧇','🥓'],
-    'Активности': ['⚽','🏀','🏈','⚾','🎾','🏐','🏉','🎱','🏓','🎯','🏆','🥇','🎮','🕹️','🎲','♟️','🎭','🎨','🎬','🎤','🎧','🎼'],
-    'Объекты': ['💡','🔦','💎','💰','💳','✉️','📦','📱','💻','⌨️','🖥️','📷','📹','🎥','📺','📻','⏰','🔑','🔒','🔓']
+    'Объекты': ['💡','💎','💰','💳','✉️','📦','📱','💻','⌨️','🖥️','📷','📹','🎥','📺','📻','⏰','🔑','🔒','🔓']
 };
 const reactionEmojis = ['❤️','😂','😮','😢','😡','👍','👎','🔥','👏','🎉'];
 
-// =============================================
-// 🔐 AUTH
-// =============================================
 let authMode = 'login';
 
 function switchAuthTab(mode) {
     authMode = mode;
-    document.querySelectorAll('.auth-tab').forEach((t, i) => {
-        t.classList.toggle('active', (i===0 && mode==='login') || (i===1 && mode==='register'));
-    });
+    document.getElementById('loginTabBtn').classList.toggle('active', mode==='login');
+    document.getElementById('registerTabBtn').classList.toggle('active', mode==='register');
     document.getElementById('registerFields').classList.toggle('active', mode==='register');
     document.getElementById('authBtn').textContent = mode==='login' ? 'Войти' : 'Зарегистрироваться';
+    document.getElementById('forgotBtn').style.display = mode==='login' ? 'block' : 'none';
     document.getElementById('authError').textContent = '';
 }
 
@@ -512,24 +500,29 @@ function previewAvatar(input) {
 
 async function handleAuth(e) {
     e.preventDefault();
-    const email = document.getElementById('authEmail').value;
+    const email = document.getElementById('authEmail').value.trim();
     const password = document.getElementById('authPassword').value;
     const errorEl = document.getElementById('authError');
+    const authBtn = document.getElementById('authBtn');
+    
     errorEl.textContent = '';
+    authBtn.disabled = true;
+    authBtn.textContent = 'Загрузка...';
 
     try {
         if (authMode === 'register') {
-            const name = document.getElementById('regName').value.trim() || 'User';
+            const name = document.getElementById('regName').value.trim() || 'Пользователь';
             const cred = await auth.createUserWithEmailAndPassword(email, password);
 
             let avatarBase64 = '';
             const avatarFile = document.getElementById('avatarInput').files[0];
             if (avatarFile) {
-                avatarBase64 = await compressImage(avatarFile, 200, 0.7);
+                avatarBase64 = await compressImage(avatarFile, 150, 0.6);
             }
 
             await db.collection('users').doc(cred.user.uid).set({
-                name, email,
+                name: name,
+                email: email,
                 avatar: avatarBase64,
                 online: true,
                 lastSeen: firebase.firestore.FieldValue.serverTimestamp(),
@@ -540,13 +533,52 @@ async function handleAuth(e) {
             await auth.signInWithEmailAndPassword(email, password);
         }
     } catch (err) {
+        console.error(err);
         const errors = {
-            'auth/user-not-found': 'Пользователь не найден',
+            'auth/user-not-found': 'Пользователь с таким Email не найден',
             'auth/wrong-password': 'Неверный пароль',
-            'auth/email-already-in-use': 'Email уже используется',
-            'auth/weak-password': 'Пароль слишком слабый (мин. 6)',
-            'auth/invalid-email': 'Некорректный email',
-            'auth/invalid-credential': 'Неверные данные'
+            'auth/email-already-in-use': 'Этот Email уже зарегистрирован',
+            'auth/weak-password': 'Пароль слишком короткий (минимум 6 символов)',
+            'auth/invalid-email': 'Некорректный формат Email',
+            'auth/invalid-credential': 'Неверный логин или пароль',
+            'auth/operation-not-allowed': 'Авторизация по Email отключена в консоли Firebase!'
+        };
+        errorEl.textContent = errors[err.code] || ('Ошибка: ' + err.message);
+    } finally {
+        authBtn.disabled = false;
+        authBtn.textContent = authMode==='login' ? 'Войти' : 'Зарегистрироваться';
+    }
+}
+
+// СБРОС ПАРОЛЯ
+function openResetModal() {
+    document.getElementById('resetEmail').value = document.getElementById('authEmail').value;
+    document.getElementById('resetError').textContent = '';
+    document.getElementById('resetPasswordModal').classList.add('active');
+}
+
+function closeResetModal() {
+    document.getElementById('resetPasswordModal').classList.remove('active');
+}
+
+async function handleResetPassword() {
+    const email = document.getElementById('resetEmail').value.trim();
+    const errorEl = document.getElementById('resetError');
+    errorEl.textContent = '';
+
+    if (!email) {
+        errorEl.textContent = 'Введите ваш Email';
+        return;
+    }
+
+    try {
+        await auth.sendPasswordResetEmail(email);
+        alert('✅ Ссылка для сброса пароля отправлена на ваш Email!');
+        closeResetModal();
+    } catch (err) {
+        const errors = {
+            'auth/user-not-found': 'Пользователь с таким Email не найден',
+            'auth/invalid-email': 'Некорректный Email'
         };
         errorEl.textContent = errors[err.code] || err.message;
     }
@@ -570,7 +602,7 @@ auth.onAuthStateChanged(async user => {
 function setupPresence() {
     window.addEventListener('beforeunload', () => {
         if (currentUser) {
-            navigator.sendBeacon && db.collection('users').doc(currentUser.uid).update({
+            db.collection('users').doc(currentUser.uid).update({
                 online: false,
                 lastSeen: firebase.firestore.FieldValue.serverTimestamp()
             }).catch(()=>{});
@@ -588,9 +620,6 @@ async function logout() {
     await auth.signOut();
 }
 
-// =============================================
-// 🗜️ COMPRESSION (без Storage — всё в base64)
-// =============================================
 function compressImage(file, maxSize = 600, quality = 0.6) {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -603,8 +632,7 @@ function compressImage(file, maxSize = 600, quality = 0.6) {
                     if (w > h) { h = h * maxSize / w; w = maxSize; }
                     else { w = w * maxSize / h; h = maxSize; }
                 }
-                canvas.width = w;
-                canvas.height = h;
+                canvas.width = w; canvas.height = h;
                 canvas.getContext('2d').drawImage(img, 0, 0, w, h);
                 resolve(canvas.toDataURL('image/jpeg', quality));
             };
@@ -617,10 +645,9 @@ function compressImage(file, maxSize = 600, quality = 0.6) {
 }
 
 function compressVideo(file) {
-    // Для видео без Storage — читаем как base64 (только маленькие файлы!)
     return new Promise((resolve, reject) => {
-        if (file.size > 800 * 1024) { // 800KB лимит для Firestore
-            reject(new Error('Видео слишком большое. Макс. ~600KB без Storage.'));
+        if (file.size > 800 * 1024) {
+            reject(new Error('Видео слишком большое (макс ~600KB)'));
             return;
         }
         const reader = new FileReader();
@@ -630,12 +657,7 @@ function compressVideo(file) {
     });
 }
 
-// =============================================
-// 💬 CHATS
-// =============================================
-function getChatId(uid1, uid2) {
-    return [uid1, uid2].sort().join('_');
-}
+function getChatId(uid1, uid2) { return [uid1, uid2].sort().join('_'); }
 
 function loadChats() {
     if (unsubscribeChats) unsubscribeChats();
@@ -655,8 +677,8 @@ async function renderChatList(chatDocs) {
         let otherUser;
         try {
             const userDoc = await db.collection('users').doc(otherUid).get();
-            otherUser = userDoc.exists ? userDoc.data() : { name:'Unknown', email:'', avatar:'' };
-        } catch { otherUser = { name:'Unknown', email:'', avatar:'' }; }
+            otherUser = userDoc.exists ? userDoc.data() : { name:'Пользователь', email:'', avatar:'' };
+        } catch { otherUser = { name:'Пользователь', email:'', avatar:'' }; }
 
         const initial = (otherUser.name || 'U')[0].toUpperCase();
         const isActive = doc.id === activeChatId;
@@ -799,9 +821,6 @@ function createMessageElement(msgId, msg) {
     return wrapper;
 }
 
-// =============================================
-// 📤 SEND MESSAGE
-// =============================================
 async function sendMessage() {
     const input = document.getElementById('messageInput');
     const text = input.value.trim();
@@ -840,17 +859,10 @@ async function sendMessage() {
             [`unread.${activeChatUser.uid}`]: firebase.firestore.FieldValue.increment(1)
         });
     } catch (err) {
-        if (err.code === 'invalid-argument' || err.message.includes('size')) {
-            alert('Файл слишком большой для Firestore (лимит ~800KB). Попруйте сжать или отправьте текст.');
-        } else {
-            console.error(err);
-        }
+        alert('Ошибка при отправке.');
     }
 }
 
-// =============================================
-// 📎 FILE HANDLING (base64, без Storage)
-// =============================================
 async function handleFileSelect(input) {
     const file = input.files[0];
     if (!file) return;
@@ -870,7 +882,7 @@ async function handleFileSelect(input) {
 
         } else if (file.type.startsWith('video/')) {
             if (file.size > 800 * 1024) {
-                alert('⚠️ Видео слишком большое!\nБез Storage лимит ~600KB.\nПопробуйте короткое видео или видео-кружок.');
+                alert('⚠️ Видео слишком большое! Попробуйте до 600KB.');
                 showCompressing(false);
                 return;
             }
@@ -904,9 +916,6 @@ function formatFileSize(bytes) {
     return (bytes/(1024*1024)).toFixed(1) + ' MB';
 }
 
-// =============================================
-// ⭕ VIDEO CIRCLE (запись → base64)
-// =============================================
 async function startRecordCircle() {
     try {
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -931,11 +940,10 @@ async function startRecordCircle() {
             document.getElementById('recordTimer').textContent =
                 String(Math.floor(elapsed/60)).padStart(2,'0') + ':' + String(elapsed%60).padStart(2,'0');
 
-            // Авто-стоп через 10 сек (лимит Firestore)
             if (elapsed >= 10) stopRecordCircle(true);
         }, 500);
     } catch (err) {
-        alert('Не удалось получить доступ к камере: ' + err.message);
+        alert('Не удалось получить доступ к камере');
     }
 }
 
@@ -953,7 +961,7 @@ async function stopRecordCircle(send) {
             const blob = new Blob(recordedChunks, { type: 'video/webm' });
 
             if (blob.size > 800 * 1024) {
-                alert('⭕ Кружок слишком большой (' + formatFileSize(blob.size) + '). Попробуйте короче.');
+                alert('⭕ Кружок слишком большой');
                 return;
             }
 
@@ -979,7 +987,7 @@ async function stopRecordCircle(send) {
                         [`unread.${activeChatUser.uid}`]: firebase.firestore.FieldValue.increment(1)
                     });
                 } catch (err) {
-                    alert('Ошибка отправки кружка: ' + err.message);
+                    alert('Ошибка отправки кружка');
                 }
                 showCompressing(false);
             };
@@ -991,9 +999,6 @@ async function stopRecordCircle(send) {
     }
 }
 
-// =============================================
-// 😊 EMOJI
-// =============================================
 function initEmojiPicker() {
     const picker = document.getElementById('emojiPicker');
     let html = '';
@@ -1017,9 +1022,6 @@ function insertEmoji(emoji) {
     input.selectionStart = input.selectionEnd = pos + emoji.length;
 }
 
-// =============================================
-// ❤️ REACTIONS
-// =============================================
 function showReactionPicker(btn) {
     const picker = btn.parentElement.querySelector('.reaction-picker');
     document.querySelectorAll('.reaction-picker.show').forEach(p => p.classList.remove('show'));
@@ -1054,9 +1056,6 @@ async function toggleReaction(msgId, emoji) {
     }
 }
 
-// =============================================
-// 📞 CALLS
-// =============================================
 function startCall(type) {
     if (!activeChatUser) return;
     const initial = (activeChatUser.name || 'U')[0].toUpperCase();
@@ -1080,9 +1079,8 @@ async function startVideoCall() {
         localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
         document.getElementById('localVideo').srcObject = localStream;
         document.getElementById('videoCallContainer').classList.add('active');
-        } catch (err) {
-            alert('Не удалось получить доступ к камере/микрофону: ' + err.message);
-        }
+    } catch (err) {
+        alert('Не удалось получить доступ к камере/микрофону');
     }
 }
 
@@ -1126,9 +1124,6 @@ function toggleCamera() {
     }
 }
 
-// =============================================
-// 🔍 ПОИСК И СОЗДАНИЕ ЧАТА
-// =============================================
 function openNewChatModal() {
     document.getElementById('newChatModal').classList.add('active');
     document.getElementById('findUserEmail').value = '';
@@ -1219,9 +1214,6 @@ function searchChats(query) {
     });
 }
 
-// =============================================
-// ⌨️ ИНДИКАТОР ПЕЧАТИ
-// =============================================
 function showTyping() {
     if (!activeChatId) return;
     db.collection('chats').doc(activeChatId).update({
@@ -1248,9 +1240,6 @@ function listenTyping(chatId, otherUid) {
     });
 }
 
-// =============================================
-// 👤 ПАНЕЛЬ ПРОФИЛЯ
-// =============================================
 async function toggleProfilePanel(target) {
     const panel = document.getElementById('profilePanel');
     if (panel.classList.contains('open')) {
@@ -1260,7 +1249,7 @@ async function toggleProfilePanel(target) {
 
     if (target === 'self') {
         const doc = await db.collection('users').doc(currentUser.uid).get();
-        const data = doc.exists ? doc.data() : { name: currentUser.displayName || 'User', email: currentUser.email };
+        const data = doc.exists ? doc.data() : { name: currentUser.displayName || 'Пользователь', email: currentUser.email };
         const initial = (data.name || 'U')[0].toUpperCase();
 
         document.getElementById('profileAvatar').innerHTML = data.avatar ? `<img src="${data.avatar}">` : initial;
@@ -1296,9 +1285,6 @@ function closeProfilePanel() {
     document.getElementById('profilePanel').classList.remove('open');
 }
 
-// =============================================
-// 🖼️ ПРОСМОТР ФОТО / ВИДЕО
-// =============================================
 function openMediaViewer(url, type) {
     const viewer = document.getElementById('mediaViewer');
     const content = document.getElementById('mediaViewerContent');
@@ -1315,9 +1301,6 @@ function closeMediaViewer() {
     document.getElementById('mediaViewerContent').innerHTML = '';
 }
 
-// =============================================
-// 🛠️ ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
-// =============================================
 function formatTime(date) {
     return date.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
 }
@@ -1339,7 +1322,6 @@ function autoResize(el) {
     el.style.height = Math.min(el.scrollHeight, 120) + 'px';
 }
 
-// Закрытие смайлов при клике мимо
 document.addEventListener('click', (e) => {
     const picker = document.getElementById('emojiPicker');
     if (picker.classList.contains('show') && !picker.contains(e.target) && !e.target.closest('.input-btn')) {
@@ -1347,9 +1329,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// =============================================
-// 🚀 ЗАПУСК
-// =============================================
 initEmojiPicker();
 </script>
 </body>
